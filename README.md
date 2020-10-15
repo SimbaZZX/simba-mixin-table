@@ -4,7 +4,6 @@
 ## 使用方式
 
 ###### 1.页面中引入mixin
-
 ```
  import tableMixin from "@/mixin/tableMixin";
 
@@ -15,7 +14,6 @@
 ```
 
 ###### 2.引入自己项目中表格组件和分页组件(任意 UI 框架,以 elmenet 举例)
-
 ```
 <el-table :data="Test.data">
     <el-table-column prop="id" label="编号" />
@@ -29,7 +27,6 @@
 ```
 
 ###### 3.在 methods 中提供一个名为 getXXXData(params)的 Promise 方法，用于查询业务数据
-
 > 注意方法名是根据传入的名称来的,params 是自动填充的参数，不用动
 
 ```
@@ -45,7 +42,6 @@ methods: {
 ```
 
 ###### 4.如需其它查询条件，则在 data 中定义对应名称的对象存放查询参数
-
 ```
 data() {
     return {
