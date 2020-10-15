@@ -8,7 +8,7 @@
 ```
  import tableMixin from "@/mixin/tableMixin";
 
- //在组件中混入,根据页面场景传入自定义的名字，如Test：
+ //在组件中混入,根据页面场景传入自定义的名字，如Test
  export default {
     mixins: [tableMixin('Test')]
  }
@@ -36,6 +36,7 @@
 methods: {
     //如mixin传入Order则方法名为getOrderList
     getTestData(params) {
+        //接口必须同时返回总数量和当前页数组，默认值为count和list，可以自行修改
         return axios.get("/art/articlelist", {
             params,
         })
