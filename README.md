@@ -34,6 +34,12 @@ methods: {
     //如mixin传入Order则方法名为getOrderList
     getTestData(params) {
         //接口必须同时返回总数量和当前页数组，默认值为count和list，可以自行修改
+        /***
+            {
+                "count": 128, 
+                "list": []
+            }
+        */
         return axios.get("/art/articlelist", {
             params,
         })
