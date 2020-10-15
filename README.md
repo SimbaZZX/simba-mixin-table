@@ -3,7 +3,7 @@
 
 ## 使用方式
 
-###### 1.页面中引入组件
+###### 1.页面中引入mixin
 
 ```
  import tableMixin from "@/mixin/tableMixin";
