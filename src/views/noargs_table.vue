@@ -3,10 +3,9 @@
     <el-main>
       <el-table :data="Test.data">
         <el-table-column prop="id" label="编号" width="140"> </el-table-column>
-        <el-table-column prop="title" label="标题" >
-        </el-table-column>
+        <el-table-column prop="title" label="标题"> </el-table-column>
       </el-table>
-      <div class="j-a-c flex" style="margin:20px 0">
+      <div class="j-a-c flex" style="margin: 20px 0">
         <el-pagination
           background
           :page-size="Test.pageSize"
@@ -26,16 +25,14 @@ import tableMixin from "@/mixin/tableMixin";
 export default {
   mixins: [tableMixin("Test")],
   methods: {
-    async getTestData(params) {
-      let res = await axios.get("http://demo.simbajs.com:89/art/articlelist", {
+    getTestData(params) {
+      return axios.get("http://demo.simbajs.com:89/art/articlelist", {
         params,
       });
-      return res;
     },
   },
 };
 </script>
-
 
 <style>
 .el-header {
